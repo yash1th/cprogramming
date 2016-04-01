@@ -1,0 +1,2 @@
+#stop tracking .out files
+*.out
