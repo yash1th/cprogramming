@@ -1,8 +1,7 @@
 #include<stdio.h>
 int main(void)
 {
-	if(100)
-	  printf("tes");
+	const int a=3;
+	a=4;
 	return 0;
-
 }
