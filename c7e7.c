@@ -15,6 +15,12 @@ int main(void)
     scanf("%d",&number);
     printf("Enter the base you want %d to convert to : ",number);
     scanf("%d",&base);
+    while(base<2 || base>16)
+    {
+      printf("That's the wrong base you entered bruh \n");
+      printf("Enter the value of the base between 2 and 16 : ");
+      scanf("%d",&base);
+    }
     tempNumber=number;
     index=0;
     while(tempNumber!=0)
