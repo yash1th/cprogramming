@@ -13,6 +13,10 @@ int main(void)
   {
     printf("Enter the number in base 10 =  ");
     scanf("%d",&number);
+    if(number==0)
+      break;
+    else
+    {
     printf("Enter the base you want %d to convert to : ",number);
     scanf("%d",&base);
     while(base<2 || base>16)
@@ -22,7 +26,7 @@ int main(void)
       scanf("%d",&base);
     }
     tempNumber=number;
-    index=0;  
+    index=0;
     while(tempNumber!=0)
     {
       baseArray[index]=tempNumber%base;
@@ -35,6 +39,7 @@ int main(void)
         nextDigit=baseArray[i];
         printf("%c",baseDigits[nextDigit]);
     }
+  }
     printf("\n");
     printf("Do you to do it again (y/n) : ");
     scanf(" %c",&again);

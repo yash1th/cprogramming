@@ -22,7 +22,7 @@ int main(void)
               }
           }
 
-    
+
     for(i=0;i<primeIndex;i++)
       printf("%i ",primes[i]);
     printf("\n");
