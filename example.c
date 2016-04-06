@@ -1,19 +1,14 @@
 #include<stdio.h>
-int sum(int);
 int main(void)
 {
-	int result;
-	result=sum(10);
-	printf("sum in main = %d \n",result);
+	struct time
+	{
+		int a;
+		int b;
+		int c;
+	};
+	struct time t;
+	t=(struct time){0,1,2};
+	printf("%d\n%d\n%d\n",t.a,t.b,t.c);
 	return 0;
-}
-int sum(int n)
-{
-	int result=0;
-	if(n==0)
-		result=0;
-	else
-		result=n+sum(n-1);
-	return result;
-
 }
