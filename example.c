@@ -1,14 +1,10 @@
 #include<stdio.h>
 int main(void)
 {
-	int result,result2,result3,result4;
-	result=21528/3600;
-	result2=21528%3600;
-	result3=result2/60;
-	result4=result2%60;
-	printf("Result = %d \n",result);
-	printf("Result2 = %d \n",result2);
-	printf("Result3 = %d \n",result3);
-	printf("Result4 = %d \n",result4);
+	char word[]={'y','a','s','h','\0'};
+	int i;
+	for(i=0;word[i]!='\0';++i)
+		printf("%c",word[i]);
+	printf("%d",i);
 	return 0;
 }
