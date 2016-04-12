@@ -1,10 +1,7 @@
 #include<stdio.h>
 int main(void)
 {
-	char word[]={'y','a','s','h','\0'};
-	int i;
-	for(i=0;word[i]!='\0';++i)
-		printf("%c",word[i]);
-	printf("%d",i);
+	for(int i=0;i<=26;i++)
+		printf("%i \n",'9');
 	return 0;
 }
