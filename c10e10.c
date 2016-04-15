@@ -35,6 +35,28 @@ int main(void)
   return 0;
 
 }
+int lookup(const struct entry dictionary[],const char search[],const int entries)
+{
+  int i;
+  int low=0;
+  int high = entries-1;
+  int mid,result;
+  while(low<=high)
+    {
+      mid=(low+high)/2;
+      result=compareStrings(dictionary[mid].word,search);
+      //here we used string 1 as the dictionary word
+      //and string 2 as the word we need to search
+
+      if(result==-1)
+        low=mid+1;
+      else if(result==1)
+          high=mid-1;
+      else
+          return mid; //found it at the mid
+    }
+  return -1; //not found at all
+}
 int compareStrings(const char s1[],const char s2[])
 {
   int i=0,answer;
@@ -48,28 +70,6 @@ int compareStrings(const char s1[],const char s2[])
   else
         answer=1;
   return answer;
-}
-int lookup(const struct entry dictionary[],const char search[],const int entries)
-{
-  int i;
-  int low=0;
-  int high = entries-1;
-  int mid,result;
-  while(low<=high)
-    {
-      mid=(low+high)/2;
-      result=compareStrings(dictionary[mid].word,search);
-      //here we used string 1 as the dictionary word
-      //and string 2 as the word we need to search
-  
-      if(result==-1)
-        low=mid+1;
-      else if(result==1)
-          high=mid-1;
-      else
-          return mid; //found it at the mid
-    }
-  return -1; //not found at all
 }
 bool equalStrings (const char s1[], const char s2[])
 {

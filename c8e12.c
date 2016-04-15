@@ -24,9 +24,9 @@ void sort(int a[],int n)
         {
           if(a[i]>a[j])
           {
-            temp=a[j];
-            a[j]=a[i];
-            a[i]=temp;
+            temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
           }
         }
     }
