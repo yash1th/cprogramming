@@ -32,7 +32,7 @@ void intToStr(int n)
     }
   else
   {
-    char string[length+1];
+    char string[length+2];
     string[length+1]='\0';
     string[0]='-';
     temp=makeItPositive(n);
