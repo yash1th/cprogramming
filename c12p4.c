@@ -29,13 +29,13 @@ unsigned int rotate(unsigned int value, int n)
     return value;
   else if(n>0){     //left rotate
 
-      bits=value>>(32-n);
+      bits=value>>(size-n);
       result=value<<n | bits;
   }
   else
   {           //right rotate
     n=-n;
-    bits=value<<(32-n);
+    bits=value<<(size-n);
     result=value>>n | bits;
   }
   return result;
