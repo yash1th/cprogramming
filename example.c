@@ -1,10 +1,11 @@
 #include<stdio.h>
-#define YES 2
 int main(void)
 {
-  printf("amam = %d\n",YES);
-  #undef YES
-  #define YES 4
-  printf("amam = %d\n",YES);
+  int i=1;
+  while(i<=100)
+  {
+    printf("%i\n",i);
+    ++i;
+  }
   return 0;
 }
